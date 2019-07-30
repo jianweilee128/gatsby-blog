@@ -4,8 +4,7 @@ import styled from "styled-components"
 import React from "react"
 
 const HeaderContainer = styled.div`
-      background: none,
-      marginBottom: 1.45rem,
+  background: none;
 `
 
 const HeaderLinksContainer = styled.div`

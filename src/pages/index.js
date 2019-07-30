@@ -12,7 +12,9 @@ const BackgroundContainer = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
-  margin-right: 45rem;
+  @media (min-width: 1240px) {
+    margin-right: 45rem;
+  }
 `
 
 const HomeContent = styled.h2`
