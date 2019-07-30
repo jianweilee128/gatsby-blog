@@ -8,9 +8,32 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
+import image from "../images/backlit-beautiful-dawn-884788.jpg"
 
 import Header from "./header"
 import "./layout.css"
+
+const MainContainer = styled.div`
+  background: url(${image}) center;
+  height: 100vh;
+  opacity: 0.9;
+`
+
+const Footer = styled.div`
+  color: #eae7dc;
+  text-align: center;
+  background: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 15px;
+`
+
+const MainContent = styled.div`
+  max-height: 1000px;
+`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,22 +48,11 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0px 1.0875rem 1.45rem`,
-          paddingTop: 0,
-        }}
-      >
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+      <MainContainer>
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <MainContent>{children}</MainContent>
+        <Footer>© {new Date().getFullYear()}, Jian Wei</Footer>
+      </MainContainer>
     </>
   )
 }
