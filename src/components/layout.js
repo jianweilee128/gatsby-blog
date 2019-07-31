@@ -15,23 +15,30 @@ import Header from "./header"
 import "./layout.css"
 
 const MainContainer = styled.div`
+  @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
+  font-family: "Roboto Condensed", sans-serif;
   margin: 0;
   padding: 0;
   background: url(${image}) center;
-  height: 100vh;
-  opacity: 0.9;
+  max-height: 100vh;
   overflow: hidden;
 `
 
-const Footer = styled.div`
+const OverlayBackground = styled.div`
+  background: rgba(0, 0, 0, 0.2);
+  height: 100vh;
+  overflow: auto;
+`
+
+const Footer = styled.h4`
   color: #eae7dc;
   text-align: center;
+  font-weight: lighter;
   background: none;
   position: absolute;
+  margin: 15px;
   left: 0;
-  right: 0;
   bottom: 0;
-  padding: 5px;
 `
 
 const MainContent = styled.div`
@@ -52,9 +59,11 @@ const Layout = ({ children }) => {
   return (
     <>
       <MainContainer>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <MainContent>{children}</MainContent>
-        <Footer>© {new Date().getFullYear()}, Jian Wei</Footer>
+        <OverlayBackground>
+          <Header siteTitle={data.site.siteMetadata.title} />
+          <MainContent>{children}</MainContent>
+          <Footer>© {new Date().getFullYear()}, Jian Wei</Footer>
+        </OverlayBackground>
       </MainContainer>
     </>
   )

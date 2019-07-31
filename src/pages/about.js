@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import styled from "styled-components"
 
 import Layout from "../components/layout"
@@ -12,12 +11,22 @@ const BackgroundContainer = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
-  margin-right: 25rem;
+
+  @media (min-width: 1240px) {
+    margin-right: 25rem;
+  }
 `
 
-const AboutContent = styled.p`
-  font-size: 1.5rem;
-  line-height: 1.3;
+const AboutContent = styled.h2`
+  font-size: 1.7rem;
+  font-weight: lighter;
+  line-height: 1.5;
+
+  @media (max-width: 420px) {
+    margin: 0;
+    font-size: 1rem;
+    text-align: center;
+  }
 `
 
 const SecondPage = () => (

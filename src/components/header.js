@@ -7,9 +7,10 @@ const HeaderContainer = styled.div`
   background: none;
 `
 
-const HeaderLinksContainer = styled.div`
+const HeaderLinksContainer = styled.h4`
   display: flex;
   justify-content: center;
+  font-weight: lighter;
 `
 
 const HeaderLink = styled(props => <Link {...props} />)`

@@ -3,11 +3,8 @@ title: "Why I Love Ice Cream"
 date: "2017-08-10"
 ---
 
-### Ice cream is the best.
+### Ice cream is dope.
 
-I scream, you scream, we all scream, because there's no more ice cream. No one's rhyming about spinach.
-
-Here is a description of this heavenly nectar from wikipedia on [ice cream](https://en.wikipedia.org/wiki/Ice_cream): 
 
 > Ice cream (derived from earlier iced cream or cream ice)is
 > a sweetened frozen food typically eaten as a snack or 
@@ -21,3 +18,5 @@ Here is a description of this heavenly nectar from wikipedia on [ice cream](http
 > The result is a smooth, semi-solid foam that is solid at 
 > very low temperatures (below 2 °C or 35 °F). It becomes 
 > more malleable as its temperature increases.
+
+![Ice cream](https://cdn.pixabay.com/photo/2016/03/23/15/00/ice-cream-cone-1274894_960_720.jpg): 

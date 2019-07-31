@@ -12,14 +12,20 @@ const BackgroundContainer = styled.div`
   align-items: center;
   justify-content: center;
   height: 100vh;
+  text-align: center;
   @media (min-width: 1240px) {
-    margin-right: 45rem;
+    margin-right: 25rem;
   }
 `
 
 const HomeContent = styled.h2`
   font-size: 2rem;
-  padding: 20px;
+  padding-bottom: 20px;
+  font-weight: lighter;
+
+  @media (max-width: 420px) {
+    text-align: center;
+  }
 `
 
 const ButtonContainer = styled.div`
@@ -29,11 +35,11 @@ const ButtonContainer = styled.div`
 const Button = styled(props => <Link {...props} />)`
   background: #416478;
   color: #eae7dc;
-  padding: 20px;
+  padding: 5px 20px;
   margin: 0 20px;
   text-decoration: none;
   border-radius: 10px;
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-align: center;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
@@ -49,10 +55,10 @@ export default ({ data }) => {
     <Layout>
       <SEO title="Home" />
       <BackgroundContainer>
-        <HomeContent>JIAN WEI'S BLOG</HomeContent>
+        <HomeContent>WELCOME TO MY BLOG</HomeContent>
         <ButtonContainer>
           <Button to="/about">ABOUT ME</Button>
-          <Button to="/blog">MY BLOG</Button>
+          <Button to="/blog">MY POSTS</Button>
         </ButtonContainer>
       </BackgroundContainer>
     </Layout>
